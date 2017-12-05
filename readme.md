@@ -3,7 +3,7 @@ Specifications
 
 0. Created and used at HelloGold for medium sized token transfers
 
-1. Scans a list of <address><ether value> in CSV file and splits into <addresses> & contracts
+1. Scans a list of &lt;address&gt;&lt;ether value&gt; in CSV file and splits into <addresses> & contracts
 2. Estimate Gas for contracts
 3. Find total gas or if there are any weird addresses
 4. Send the tokens recording the transaction ID

@@ -51,3 +51,32 @@ false -> 1000000000000000000
 ```
 
 see example config.json and test.csv
+
+USAGE
+-----
+
+build it & run once
+
+`gasAndSendTokens --input=test.csv`
+
+```
+Token :  Useless Ethereum Token
+Payment Address  0xb85D7A869a61C60CDA6AF549Cc29A76476597ddf
+
+
+
+Addresses-----------------------------------> 1
+0xffC232afBdB712b54DF9291bcA252aB0D8Dc08f6 501320000000000000000 gas :  145000
+Contracts-----------------------------------> 1
+0x7da82C7AB4771ff031b66538D2fB9b0B047f6CF9 71910000000000000000 gas :  145000
+SKIPPED ------------------------------------> 0
+
+Tokens Required 573.230000000000000000, total gas 290000, total gas price 0.000290000000000000
+
+Payment not enabled
+```
+
+Now transfer enough ether and tokens to the payment address, then run
+
+`gasAndSendTokens --input=test.csv --pay=yes`
+

@@ -14,7 +14,7 @@ NOTE - currently does not estimate the gas needed - please supply default
 configuration : JSON FILE
 -------------------------
 
-This file was set up to transfer UET 
+This demo file was set up to transfer UET 
 
 ```
 {

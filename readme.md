@@ -6,8 +6,10 @@ Specifications
 1. Scans a list of <address><ether value> in CSV file and splits into <addresses> & contracts
 2. Estimate Gas for contracts
 3. Find total gas or if there are any weird addresses
-4. Send the bloody ether recording transaction ID
+4. Send the tokens recording the transaction ID
 5. Use etherscan to check the transaction list for success or failure
+
+NOTE - currently does not estimate the gas needed - please supply default
 
 configuration : JSON FILE
 -------------------------

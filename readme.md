@@ -80,3 +80,15 @@ Now transfer enough ether and tokens to the payment address, then run
 
 `gasAndSendTokens --input=test.csv --pay=yes`
 
+Things you need to build it
+---------------------------
+
+* Golang properly installed
+
+The following libraries (use go get)
+
+* github.com/ethereum/go-ethereum
+* github.com/DaveAppleton/etherUtils
+* github.com/DaveAppleton/ether_go
+* github.com/spf13/viper
+

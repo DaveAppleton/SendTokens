@@ -1,7 +1,7 @@
 Specifications
 ==============
 
-0. Slurp incoming Transfers of HGT to HelloGold MultiSig into list for Hariths' checking (in CSV format) with Ether paid for dem HGT
+0. Created and used at HelloGold for medium sized token transfers
 
 1. Scans a list of <address><ether value> in CSV file and splits into <addresses> & contracts
 2. Estimate Gas for contracts

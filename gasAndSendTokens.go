@@ -208,12 +208,19 @@ func main() {
 		log.Fatal(err)
 	}
 
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	ethBal, err := client.BalanceAt(ctx, payer.PublicKey(), nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	tokenBal, err := theToken.BalanceOf(nil, payer.PublicKey())
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Payment Address ", payer.PublicKeyAsHexString())
+	fmt.Println("Payment Address ", payer.PublicKeyAsHexString(), ", ether = ", etherUtils.EtherToStr(ethBal), theTokenName, "=", etherUtils.CoinToStr(tokenBal, int(decimalPlaces)))
 	fmt.Println()
 	fmt.Println()
 	fmt.Println()
@@ -276,7 +283,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 20*time.Second)
+	ctx, cancel = context.WithTimeout(context.Background(), 20*time.Second)
 	defer cancel()
 	balance, err := client.BalanceAt(ctx, payer.PublicKey(), nil)
 	if err != nil {
